@@ -10,5 +10,6 @@ module.exports = [
   './gulp/tasks/font.js',
   './gulp/tasks/jsLint.js',
   './gulp/tasks/sprite.js',
+  './gulp/tasks/svg.js',
   './gulp/tasks/cache.js',
 ];

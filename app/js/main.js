@@ -30,7 +30,7 @@ if (matchMedia) {
 }
 
 function triggerButton() {
-  $('.header__roll').toggleClass('active').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
+  $(this).toggleClass('active').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
 }
 
 function WidthChange(mq) {
@@ -45,3 +45,8 @@ function WidthChange(mq) {
     $('.nav, .header, .content__wrap').addClass('collapse').find('.header__roll').toggleClass('active').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
   }
 }
+
+$('.another__header--roll').on('click', function () {
+  $('.nav').toggleClass('collapse__tablets').toggleClass('collapse')
+  $(this).toggleClass('collapse__tablets').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
+})

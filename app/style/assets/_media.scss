@@ -135,8 +135,13 @@
 }
 
 @media screen and (max-width: 550px) {
-  .header__roll.active {
+  .header__roll {
     left: 0;
+    display: none;
+  }
+  .another__header--roll {
+    left: 0;
+    display: block;
   }
   .header.collapse,
   .nav.collapse {
@@ -163,14 +168,14 @@
   .content__top--rollut_icon {
     margin-left: 5px;
   }
+  .top__path--list {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
   /*phones*/
   .content__top--ctrl_item:first-child {
     margin-left: 0;
-  }
-  .top__path--list {
-    display: none;
   }
 }

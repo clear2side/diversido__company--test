@@ -31,13 +31,22 @@ body {
   float: right;
 }
 
-.header__roll {
+.header__roll,
+.another__header--roll {
   position: absolute;
   height: 80px;
   left: -19px;
   top: 0;
   margin: auto;
   z-index: 11;
+}
+
+.header__roll {
+  display: block;
+}
+
+.another__header--roll {
+  display: none;
 }
 
 .header__roll--wrapp {
@@ -187,7 +196,7 @@ body {
 
 .nav__item {
   position: relative;
-  height: 75px;
+  height: 60px;
   .nav__options--list {
     display: none;
   }
@@ -363,8 +372,9 @@ body {
   .nav__conteiner {
     padding-left: 0;
   }
-  .user__info {
-    padding-left: 14px;
+  .user__info--photo {
+    display: block;
+    margin: 0 auto;
   }
   .nav__item--button {
     display: inherit;
@@ -391,4 +401,11 @@ body {
 
 .nav.collapse__tablets {
   width: 100%;
+}
+
+
+/* svg */
+
+.img__svg svg {
+  fill: #fff;
 }
