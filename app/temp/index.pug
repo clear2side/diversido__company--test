@@ -1,0 +1,55 @@
+extends ./modules/_head
+block variables
+  - var title = 'Home page'
+block content
+  .content__wrap
+    .content
+      ul.content__list
+
+        li.content__list--item
+          .content__top
+            .conteiner
+              button.content__top--rollup
+                span.content__top--rollup_title recent order
+                span.content__top--rollut_icon
+                  svg.content__top--rollut_icon-svg
+                    polyline(points="0 0,6 6, 12 0" fill='#777')
+              ul.content__top--ctrl_list
+                li.content__top--ctrl_item
+                  button.content__top--ctrl_button
+                    +icon('refresh')
+                li.content__top--ctrl_item
+                  button.content__top--ctrl_button    
+                    +icon('ok')
+                li.content__top--ctrl_item
+                  button.content__top--ctrl_button    
+                    +icon('chest')
+          .content__table
+            .conteiner
+              table.content__table
+                tr.table--goods
+                each tableTitles in tableTitle
+                  th.content__table--titles= tableTitles
+                tr.table--goods
+                  td.content__goods
+                    img(src="./img/bg.png")
+                  td.content__goods(v-for="(item,index) in goods1") {{item}}
+                tr.table--goods
+                  td.content__goods
+                    img(src="./img/bg2.png")
+                  td.content__goods(v-for="(item,index) in goods2") {{item}}
+  
+  script(src='./js/jsLibs.js')
+  script(src='./js/main.js')
+  script.
+    Vue.component('v-img', {
+      template: '<img>'
+    });
+    new Vue({
+      el: '.content__wrap',
+      data: {
+        message: "Hello VUE!!!",
+        goods1: ['Your Product Title Here', '3BSD59','Paid','27 Sep 2015',99,2,'#BG6R9853LP'],
+        goods2: ['Your Product Title Here', '3BH87G','Pending','08 Sep 2015',99,2,'#368QRM83B']
+      }
+    });

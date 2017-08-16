@@ -1,0 +1,28 @@
+header.header
+  .header__path
+    button.header__roll.active
+      .header__roll--wrapp
+        span.header__roll--icon.open.active
+          +icon('open_nav')
+        span.header__roll--icon.close
+          +icon('close_nav')
+    ul.top__path--list
+      li.top__path--item_hidden
+        a(href="#") PATH
+          span.content__top--rollut_icon
+            svg.content__top--rollut_icon-svg
+              polyline(points="0 0,6 6, 12 0" fill='#fff')
+      li.top__path--item
+        a(href="#") Dashboard /
+      li.top__path--item
+        a(href="#") Home /
+      li.top__path--item
+        a(href="#") All Site View
+
+  .header__report
+    span.header__report--title Reporting Period
+    select.header__report--select
+      option Last 30 Day's
+      option Last 20 Day's
+      option Last 10 Day's
+      option Last 5 Day's

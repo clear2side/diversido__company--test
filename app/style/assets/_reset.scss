@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'lato';
+  font-size: 16px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: none;
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+svg {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}

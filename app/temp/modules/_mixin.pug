@@ -1,0 +1,12 @@
+mixin icon(name,mod)
+  -mod = mod || ''
+  svg(class="icon icon-" + name + ' ' + mod)
+    use(xlink:href="/img/symbol/sprite.svg#" + name)
+
+
+- var colorCircles = ['#f16192', '#46c1fa', '#ea6ef5', '#86c95a']
+- var dashboardsCircles = ['Dashboard1', 'Dashboard2','Dashboard3','Comming Soon'] 
+- var layoutsCircles = ['Layout1','Comming Soon'] 
+- var pagesCircles = ['Page1','Page2','Comming Soon']
+- var tableTitle = ['image', 'product name', 'product code', 'status', 'purchased on', 'price', 'quantity', 'tracking no#']
+-var goods = {'good1':[123,122,111],'good2':[321,3121,222]}
