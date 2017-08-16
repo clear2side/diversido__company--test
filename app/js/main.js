@@ -35,13 +35,13 @@ function triggerButton() {
 
 function WidthChange(mq) {
   if (!mq.matches) {
-    // $('.nav, .header, .content__wrap').addClass('collapse');
+    $('.nav, .header, .content__wrap').addClass('collapse').find('.header__roll').toggleClass('active').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
 
     // $('.header__roll').on('click', function () {
     // $('.nav').toggleClass('collapse__tablets').toggleClass('collapse')
     // });
 
   } else {
-    // $('.nav, .header, .content__wrap').addClass('collapse');
+    $('.nav, .header, .content__wrap').addClass('collapse').find('.header__roll').toggleClass('active').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
   }
 }
