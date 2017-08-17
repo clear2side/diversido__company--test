@@ -23,43 +23,57 @@ block content
                 li.content__top--ctrl_item
                   button.content__top--ctrl_button(@click="delElem=false" v-bind:title="messageDel")    
                     +icon('chest')
-          .content__table(v-show="triggerRoll")
-            .conteiner
-              table.content__table(v-if="delElem")
-                tr.table--obj
-                each tableTitles in tableTitle
-                  th.content__table--titles= tableTitles
-                tr.table--obj()
-                  td.content__obj
-                    img(src="./img/bg.png")
-                  td.content__obj(v-for="(item,index) in obj1") {{item}}
-                tr.table--obj
-                  td.content__obj
-                    img(src="./img/bg2.png")
-                  td.content__obj(v-for="(item,index) in obj2") {{item}}
-                tr.table--obj.add__table--obj
-                  td.content__obj.add__table--good_item
-                    img(src="./img/bg2.png")
-                  td.content__obj(v-for="(item,index) in obj2") {{item}}
+          transition(name="slide-fade")
+            .content__table(v-show="triggerRoll")
+              .conteiner
+                transition(name="slide-fade")
+                  table.content__table(v-if="delElem")
+                    tr.table--obj
+                    each tableTitles in tableTitle
+                      th.content__table--titles= tableTitles
+                    tr.table--obj
+                      td.content__obj
+                        img(src="./img/bg.png")
+                      td.content__obj(v-for="(item,index) in obj1") {{item}}
+                    tr.table--obj
+                      td.content__obj
+                        img(src="./img/bg2.png")
+                      td.content__obj(v-for="(item,index) in obj2") {{item}}
+    
+    .add__obj--wrapper
+      button.add__obj--button(@click="formNewObj=!formNewObj")
+        span.add__obj--icon + 
+      .wrap__animation--form
+        transition( 
+          name="form-transition"
+          enter-to-class="animated slideInRight"
+          leave-to-class="animated bounceOutRight")  
 
+          .block__form--new_obj(v-show="formNewObj")
+            .form__new_obj
+              span.form__titles login
+              input.form__userData(v-model="user_name")
+            .form__new_obj
+              span.form__titles your company 
+              input.form__userData(v-model="user_company")
 
-
-  script(src='./js/jsLibs.js')
-  script(src='./js/main.js')
   script.
     Vue.component('v-img', {
       template: '<img>'
     });
     new Vue({
-      el: '.content__wrap',
+      el: '.wrap--all',
       data: {
         message: "Hello VUE!!!",
-        triggerRoll: true,
-        delElem: true,
-        messageRoll: 'Свернуть',
-        messageApply: 'Применить',
         messageRefresh: 'Вернуть в DOM',
         messageDel: 'Удалить DOM-element',
+        messageApply: 'Применить',
+        messageRoll: 'Свернуть',
+        triggerRoll: true,
+        delElem: true,
+        user_name: 'User name',
+        user_company: 'Company name',
+        formNewObj: true,
         obj1: ['Your Product Title Here', '3BSD59','Paid','27 Sep 2015',99,2,'#BG6R9853LP'],
         obj2: ['Your Product Title Here', '3BH87G','Pending','08 Sep 2015',99,2,'#368QRM83B']
       }

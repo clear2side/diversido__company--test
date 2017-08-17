@@ -1,6 +1,6 @@
 header.header
   .header__path
-    button.header__roll.active(v-bind:title="messageRoll1")
+    button.header__roll.active(v-bind:title="messageSwitch")
       .header__roll--wrapp
         span.header__roll--icon.open.active
           +icon('open_nav')
@@ -32,3 +32,11 @@ header.header
       option Last 20 Day's
       option Last 10 Day's
       option Last 5 Day's
+
+  script.
+    var headerVue = new Vue({
+      el: '.header',
+      data: {
+        messageSwitch: 'switch navigate'
+      }
+    })

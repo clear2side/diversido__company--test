@@ -131,7 +131,7 @@
   .content__top--rollup_title {
     font-size: 12px;
     margin-right: 0;
-  }
+  } 
 }
 
 @media screen and (max-width: 550px) {
@@ -179,11 +179,23 @@
       display: block;
     }
   }
+  .form__titles {
+    display: block;
+  }
+  .form__new_obj {
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 480px) {
   /*phones*/
   .content__top--ctrl_item:first-child {
     margin-left: 0;
+  }
+  .add__obj--wrapper {
+    margin-right: 0;
+  }
+  .form__userData {
+    font-size: 12px;
   }
 }

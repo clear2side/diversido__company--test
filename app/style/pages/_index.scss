@@ -88,3 +88,81 @@
 .content__obj {
   text-align: center;
 }
+
+/* add new table item */
+.add__obj--wrapper {
+  margin: 20px 40px 0 0 ;
+  display: block;
+  text-align: right;
+  height: 50px;
+  @extend %clearfix;
+}
+
+.add__obj--button {
+  display: inline-block;
+  float: right;
+  background: lightgrey;
+  height: 100%;
+  width: 50px;
+  margin-right: -40px;
+  border-radius: 50px;
+  line-height: 50px;
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: 12;
+  &:hover {
+    border: 1px solid lightgrey;
+    background: #fbfbfb;
+    .add__obj--icon { 
+      color: grey;
+    }
+  }
+}
+
+.add__obj--icon {
+  font-size: 35px;
+  font-weight: bold;
+  color: #fbfbfb;
+}
+
+/* vue animation */
+.slide-fade-enter-active {
+  transition: all .5s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+.wrap__animation--form {
+  overflow: hidden;
+  display: inline-block;
+  background: #fbfbfb;
+  border-top-left-radius: 20px;
+}
+.block__form--new_obj {
+  display: inline-block;
+  height: 100%;
+}
+
+.form__new_obj {
+  display: block;
+  padding: 10px;
+  border-right: 0;
+  padding-left: 30px;
+}
+.form__titles {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 12px;
+}
+.form__userData {
+  color: $c-blue;
+  font-size: 14px;
+  padding: 3px 5px;
+}

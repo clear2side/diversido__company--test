@@ -13,14 +13,17 @@ html(lang='en')
     link(rel="shortcut icon" href="./img/diversido-favicon.ico")
     link(rel='stylesheet' href='./css/cssLibs.css')
     link(rel='stylesheet' href='./css/main.css')
-
+    script(src='./js/jsLibs.js')
+    
     <!--[if lt IE 9]>
     script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
     <![endif]-->
   body
-    include ./_mixin
-    include ./_header
-    include ./_nav
-    block content
-    svg.hide
-      include ./../../sprite/symbol/sprite.svg
+    .wrap--all
+      include ./_mixin
+      include ./_header
+      include ./_nav
+      block content
+    svg.hide__svg
+        include ./../../sprite/symbol/sprite.svg
+    script(src='./js/main.js')

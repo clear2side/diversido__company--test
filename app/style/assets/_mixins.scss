@@ -5,6 +5,7 @@
     clear: both;
   }
 }
+//  @extend %clearfix;
 
 @mixin desktop {
   @media (max-width: 1200px) {

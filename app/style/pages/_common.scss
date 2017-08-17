@@ -1,4 +1,4 @@
-.page__wrapper {
+.wrap--all {
   height: 100%;
   @extend %clearfix;
 }
@@ -49,6 +49,9 @@ body {
   margin-left: 10px;
 }
 
+.hide__svg {
+  display: none;
+}
 
 /* ---------------- COLLAPSE ---------------- */
 
@@ -94,22 +97,4 @@ body {
 
 .nav.collapse__tablets {
   width: 100%;
-}
-
-
-/* svg */
-
-.hide {
-  display: none;
-}
-
-.icon1 {
-  height: 36px;
-  width: 36px;
-}
-
-.asdf {
-  fill: #fff;
-  width: 12px;
-  height: 12px;
 }
