@@ -123,7 +123,7 @@
     font-size: 10px;
   }
   .table--goods {
-    font-size: 10px;
+    font-weight: normal;
   }
   .content__wrap.collapse {
     width: calc(100% - 80px);
@@ -135,6 +135,9 @@
 }
 
 @media screen and (max-width: 550px) {
+  .content {
+    overflow-x: scroll;
+  }
   .header__roll {
     left: 0;
     display: none;
@@ -170,6 +173,11 @@
   }
   .top__path--list {
     display: none;
+  }
+  .nav.collapse__tablets {
+    .nav__right--icon {
+      display: block;
+    }
   }
 }
 

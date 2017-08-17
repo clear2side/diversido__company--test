@@ -113,6 +113,7 @@ body {
   padding: 10px 20px;
   border-radius: 4px;
   font-size: 14px;
+  color: grey;
 }
 
 
@@ -233,7 +234,11 @@ body {
 
 .nav__item--button_arrow {
   position: absolute;
+  height: 25px;
+  top: 0;
+  bottom: 0;
   right: 50px;
+  margin: auto;
 }
 
 .nav__item--button_arrow-svg {
@@ -406,6 +411,17 @@ body {
 
 /* svg */
 
-.img__svg svg {
+.hide {
+  display: none;
+}
+
+.icon1 {
+  height: 36px;
+  width: 36px;
+}
+
+.asdf {
   fill: #fff;
+  width: 12px;
+  height: 12px;
 }

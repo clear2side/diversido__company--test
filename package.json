@@ -31,11 +31,11 @@
     "gulp-svgmin": "^1.2.4",
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-pngquant": "^5.0.1",
-    "tinypng": "^0.1.1",
-    "vue": "^2.4.2"
+    "tinypng": "^0.1.1"
   },
   "dependencies": {
     "jquery": "^3.2.1",
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "vue": "^2.4.2"
   }
 }
