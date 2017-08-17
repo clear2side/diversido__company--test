@@ -4,7 +4,7 @@
 
 @media screen and (max-width: 992px) {
   /*laptop*/
-  .table--goods {
+  .table--obj {
     font-size: 14px;
   }
   .content__table--titles {
@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-width: 850px) {
-  .table--goods {
+  .table--obj {
     font-size: 12px;
   }
   .content__table--titles {
@@ -122,7 +122,7 @@
   .content__table--titles {
     font-size: 10px;
   }
-  .table--goods {
+  .table--obj {
     font-weight: normal;
   }
   .content__wrap.collapse {

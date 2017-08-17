@@ -8,6 +8,7 @@ $('.nav__item').on('click', function () {
   }
 });
 
+// header trigger
 $('.header__roll').on('click', function () {
   $(this).toggleClass('active');
   if (!$(this).hasClass('active')) {
@@ -29,24 +30,18 @@ if (matchMedia) {
   WidthChange(mq);
 }
 
-function triggerButton() {
-  $(this).toggleClass('active').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
-}
-
 function WidthChange(mq) {
   if (!mq.matches) {
     $('.nav, .header, .content__wrap').addClass('collapse').find('.header__roll').toggleClass('active').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
-
-    // $('.header__roll').on('click', function () {
-    // $('.nav').toggleClass('collapse__tablets').toggleClass('collapse')
-    // });
-
-  } else {
-    // $('.nav, .header, .content__wrap').addClass('collapse').find('.header__roll').toggleClass('active').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
-  }
+  } 
 }
 
 $('.another__header--roll').on('click', function () {
   $('.nav').toggleClass('collapse__tablets').toggleClass('collapse')
   $(this).toggleClass('collapse__tablets').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
 })
+
+// button icon trigger
+function triggerButton() {
+  $(this).toggleClass('active').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
+}

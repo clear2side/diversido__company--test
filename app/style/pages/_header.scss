@@ -1,0 +1,105 @@
+.header {
+  float: right;
+  width: 70%;
+  background: $c-green;
+  @extend %clearfix;
+  line-height: 80px;
+}
+
+.header__path {
+  float: left;
+  position: relative;
+}
+
+.top__path--item_hidden {
+  display: none;
+}
+
+.header__report {
+  float: right;
+}
+
+.header__roll,
+.another__header--roll {
+  position: absolute;
+  height: 80px;
+  left: -19px;
+  top: 0;
+  margin: auto;
+  z-index: 11;
+}
+
+.header__roll {
+  display: block;
+}
+
+.another__header--roll {
+  display: none;
+}
+
+.header__roll--wrapp {
+  display: block;
+  height: 38px;
+  width: 38px;
+  line-height: 31px;
+  border-radius: 38px;
+  background: #46c1fa;
+  &:hover {
+    background: $c-green;
+  }
+}
+
+.header__roll--icon {
+  width: 50%;
+  height: 50%;
+  vertical-align: middle;
+  display: none;
+  use {
+    fill: #fff;
+  }
+}
+
+.header__roll--icon.active {
+  display: inline-block;
+}
+
+.top__path--item {
+  display: inline-block;
+}
+
+.top__path--list {
+  margin-left: 40px;
+}
+
+.content__top--rollut_icon {
+  margin-left: 10px;
+}
+
+.top__path--item a,
+.top__path--item_hidden a {
+  color: #fff;
+}
+
+.top__path--item:hover a,
+.top__path--item_hidden:hover a {
+  color: $c-blue;
+  .content__top--rollut_icon-svg polyline {
+    fill: $c-blue;
+  }
+}
+
+.top__path--item_hidden a {
+  font-weight: bold;
+}
+
+.header__report--title {
+  color: #fff;
+}
+
+.header__report--select {
+  margin: 0 25px 0 17px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: grey;
+}

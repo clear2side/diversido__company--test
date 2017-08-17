@@ -8,7 +8,7 @@
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" href="./img/diversido-favicon.ico">
     <link rel="stylesheet" href="./css/cssLibs.css">
     <link rel="stylesheet" href="./css/main.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
@@ -16,7 +16,7 @@
   <body>
     <header class="header">
       <div class="header__path">
-        <button class="header__roll active">
+        <button class="header__roll active" v-bind:title="messageRoll1">
           <div class="header__roll--wrapp"><span class="header__roll--icon open active">
                   <svg class="icon icon-open_nav ">
                     <use xlink:href="#open_nav"></use>
@@ -166,27 +166,27 @@
           <li class="content__list--item">
             <div class="content__top">
               <div class="conteiner">
-                <button class="content__top--rollup"><span class="content__top--rollup_title">recent order</span><span class="content__top--rollut_icon">
+                <button class="content__top--rollup" id="roll__up" @click="triggerRoll = !triggerRoll" v-bind:title="messageRoll"><span class="content__top--rollup_title">recent order</span><span class="content__top--rollut_icon">
                     <svg class="content__top--rollut_icon-svg">
-                      <polyline points="0 0,6 6, 12 0" fill="#777"></polyline>
+                      <polyline points="0 0,6 6,12 0" fill="#777"></polyline>
                     </svg></span></button>
                 <ul class="content__top--ctrl_list">
                   <li class="content__top--ctrl_item">
-                    <button class="content__top--ctrl_button">
+                    <button class="content__top--ctrl_button" @click="delElem=true" v-bind:title="messageRefresh">
                           <svg class="icon icon-refresh ">
                             <use xlink:href="#refresh"></use>
                           </svg>
                     </button>
                   </li>
                   <li class="content__top--ctrl_item">
-                    <button class="content__top--ctrl_button">   
+                    <button class="content__top--ctrl_button" v-bind:title="messageApply">   
                           <svg class="icon icon-ok ">
                             <use xlink:href="#ok"></use>
                           </svg>
                     </button>
                   </li>
                   <li class="content__top--ctrl_item">
-                    <button class="content__top--ctrl_button">   
+                    <button class="content__top--ctrl_button" @click="delElem=false" v-bind:title="messageDel">   
                           <svg class="icon icon-chest ">
                             <use xlink:href="#chest"></use>
                           </svg>
@@ -195,10 +195,10 @@
                 </ul>
               </div>
             </div>
-            <div class="content__table">
+            <div class="content__table" v-show="triggerRoll">
               <div class="conteiner">
-                <table class="content__table">
-                  <tr class="table--goods"></tr>
+                <table class="content__table" v-if="delElem">
+                  <tr class="table--obj"></tr>
                   <th class="content__table--titles">image</th>
                   <th class="content__table--titles">product name</th>
                   <th class="content__table--titles">product code</th>
@@ -207,19 +207,28 @@
                   <th class="content__table--titles">price</th>
                   <th class="content__table--titles">quantity</th>
                   <th class="content__table--titles">tracking no#</th>
-                  <tr class="table--goods">
-                    <td class="content__goods"><img src="./img/bg.png"></td>
-                    <td class="content__goods" v-for="(item,index) in goods1">{{item}}</td>
+                  <tr class="table--obj">
+                    <td class="content__obj"><img src="./img/bg.png"></td>
+                    <td class="content__obj" v-for="(item,index) in obj1">{{item}}</td>
                   </tr>
-                  <tr class="table--goods">
-                    <td class="content__goods"><img src="./img/bg2.png"></td>
-                    <td class="content__goods" v-for="(item,index) in goods2">{{item}}</td>
+                  <tr class="table--obj">
+                    <td class="content__obj"><img src="./img/bg2.png"></td>
+                    <td class="content__obj" v-for="(item,index) in obj2">{{item}}</td>
+                  </tr>
+                  <tr class="table--obj add__table--obj">
+                    <td class="content__obj add__table--good_item"><img src="./img/bg2.png"></td>
+                    <td class="content__obj" v-for="(item,index) in obj2">{{item}}</td>
                   </tr>
                 </table>
               </div>
             </div>
           </li>
         </ul>
+        <div class="popup">
+          <div class="popup__aside">
+            <div class="popup__window">           </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./js/jsLibs.js"></script>
@@ -232,8 +241,14 @@
         el: '.content__wrap',
         data: {
           message: "Hello VUE!!!",
-          goods1: ['Your Product Title Here', '3BSD59','Paid','27 Sep 2015',99,2,'#BG6R9853LP'],
-          goods2: ['Your Product Title Here', '3BH87G','Pending','08 Sep 2015',99,2,'#368QRM83B']
+          triggerRoll: true,
+          delElem: true,
+          messageRoll: 'Свернуть',
+          messageApply: 'Применить',
+          messageRefresh: 'Вернуть в DOM',
+          messageDel: 'Удалить DOM-element',
+          obj1: ['Your Product Title Here', '3BSD59','Paid','27 Sep 2015',99,2,'#BG6R9853LP'],
+          obj2: ['Your Product Title Here', '3BH87G','Pending','08 Sep 2015',99,2,'#368QRM83B']
         }
       });
     </script>

@@ -19,16 +19,16 @@ $.path.task.forEach(function (taskPath) {
 
 $.gulp.task('default', $.gulp.series(
   'del',
+  'sprite:svg',
   $.gulp.parallel(
     'cache',
     'sass',
-    'pug',
     'css:libs',
     'js:libs',
     'copy:js',
     'copy:img',
     'copy:fonts',
-    'sprite:svg'
+    'pug'
   ),
   $.gulp.parallel(
     'watch',
