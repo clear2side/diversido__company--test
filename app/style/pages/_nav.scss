@@ -38,7 +38,9 @@
 }
 
 .user__info {
-  padding-top: 11px;
+  height: 100%;
+  display: flex;
+  align-items: center;
   span {
     display: block;
   }
@@ -52,6 +54,14 @@
 
 .user__info--name {
   margin-left: 20px;
+  width: 60%;
+  overflow: hidden;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 0;
+    display: block;
+  }
 }
 
 .user__info--photo {
@@ -59,16 +69,30 @@
   height: 57px;
   width: 57px;
   overflow: hidden;
+  background: #fff;
+  img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
-.user__info--photo img {
-  height: 100%;
-  width: 100%;
+
+v-one, v-two, v-three, v-four { 
+  height: 57px;
+  width: 57px;
+  display: block;
 }
+
 
 .user__info--surname {
   font-size: 20px;
   font-weight: bold;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 0;
+    display: block;
+  }
 }
 
 .user__info--company {

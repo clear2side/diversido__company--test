@@ -57,10 +57,34 @@ block content
               span.form__titles your company 
               input.form__userData(v-model="user_company")
 
+            .form__radio--pic_wrap
+              .form__radio--pic
+              
+                input(
+                  type="radio" id="v-one"       value="ava_one" v-model="labelAva" @click="switchAva('v-one')")
+                label(for="v-one")
+                  .user__info--photo
+                    img(src="./img/1.png", alt="photo")
+              
+                input(
+                  type="radio" id="v-two" value="ava_two" v-model="labelAva" @click="switchAva('v-two')" )
+                label(for="v-two" )
+                  .user__info--photo
+                    img(src="./img/2.png", alt="photo")
+                    
+                input(
+                  type="radio" id="v-three" value="ava_tree" v-model="labelAva" @click="switchAva('v-three')" )
+                label(for="v-three" )
+                  .user__info--photo
+                    img(src="./img/4.jpg", alt="photo")
+
+                input(
+                  type="radio" id="v-four" value="ava_four" v-model="labelAva" @click="switchAva('v-four')" )
+                label(for="v-four" )
+                  .user__info--photo
+                    img(src="./img/2.jpg", alt="photo")
+
   script.
-    Vue.component('v-img', {
-      template: '<img>'
-    });
     new Vue({
       el: '.wrap--all',
       data: {
@@ -74,7 +98,28 @@ block content
         user_name: 'User name',
         user_company: 'Company name',
         formNewObj: true,
+        curAva: 'v-one',
+        labelAva: '',
         obj1: ['Your Product Title Here', '3BSD59','Paid','27 Sep 2015',99,2,'#BG6R9853LP'],
         obj2: ['Your Product Title Here', '3BH87G','Pending','08 Sep 2015',99,2,'#368QRM83B']
+      },
+      components: {
+        'v-one': {
+          template: '<div class="user__info--photo"><img src="./img/1.png" alt="photo"></div>'
+        },
+        'v-two': {
+          template: '<div class="user__info--photo"><img src="./img/2.png" alt="photo"></div>'
+        },
+        'v-three': {
+          template: '<div class="user__info--photo"><img src="./img/4.jpg" alt="photo"></div>'
+        },
+        'v-four': {
+          template: '<div class="user__info--photo"><img src="./img/2.jpg" alt="photo"></div>'
+        } 
+      },
+      methods: {
+        switchAva: function (view) {
+          this.curAva = view;
+        }
       }
     });

@@ -13,6 +13,12 @@
   .content__top--rollup_title {
     font-size: 14px;
   }
+  .user__info--surname {
+    font-size: 16px;
+  }
+  .user__info--company {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -58,9 +64,6 @@
     height: 37px;
     width: 37px;
   }
-  .user__info {
-    padding-top: 20px;
-  }
   .nav__conteiner {
     padding-left: 20px;
   }
@@ -84,12 +87,7 @@
   .logo__link--title {
     font-size: 25px;
   }
-  .user__info--surname {
-    font-size: 16px;
-  }
-  .user__info--company {
-    font-size: 12px;
-  }
+
   .nav__right--icon {
     display: none;
   }
@@ -131,7 +129,10 @@
   .content__top--rollup_title {
     font-size: 12px;
     margin-right: 0;
-  } 
+  }
+  .user__info--surname {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -197,5 +198,11 @@
   }
   .form__userData {
     font-size: 12px;
+  }
+  .form__radio--pic {
+    .user__info--photo {
+      height: 30px;
+      width: 30px;
+    }
   }
 }

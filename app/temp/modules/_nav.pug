@@ -6,8 +6,7 @@ nav.nav
   .user
     .nav__conteiner
       .user__info
-        .user__info--photo
-          img(src="./img/photo.png", alt="photo")
+        div(v-bind:is="curAva")
         .user__info--name
           span.user__info--surname {{user_name}}
           span.user__info--company {{user_company}}
