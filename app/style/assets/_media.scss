@@ -182,7 +182,7 @@
   }
   .nav.collapse__tablets {
     .nav__right--icon {
-      display: block;
+      display: inline-block;
     }
   }
   .form__titles {
@@ -190,6 +190,9 @@
   }
   .form__new_obj {
     text-align: left;
+  }
+  .user {
+    height: 80px;
   }
 }
 

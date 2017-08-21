@@ -33,12 +33,14 @@ if (matchMedia) {
 function WidthChange(mq) {
   if (!mq.matches) {
     $('.nav, .header, .content__wrap').addClass('collapse').find('.header__roll').toggleClass('active').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
-  } 
+  }
 }
 
 $('.another__header--roll').on('click', function () {
   $('.nav').toggleClass('collapse__tablets').toggleClass('collapse')
   $(this).toggleClass('collapse__tablets').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
+
+  $('.content__wrap').toggle();
 })
 
 // button icon trigger
