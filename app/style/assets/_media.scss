@@ -1,5 +1,11 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-height: 600px) {
   /*desktop*/
+  .user {
+    height: 80px;
+  }
+  .nav__item.deactive {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -87,7 +93,6 @@
   .logo__link--title {
     font-size: 25px;
   }
-
   .nav__right--icon {
     display: none;
   }

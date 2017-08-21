@@ -3,10 +3,6 @@
   @extend %clearfix;
 }
 
-body {
-  overflow: hidden;
-}
-
 
 /* ---------------- SVG ---------------- */
 
@@ -53,6 +49,7 @@ body {
   display: none;
 }
 
+
 /* ---------------- COLLAPSE ---------------- */
 
 .nav.collapse {
@@ -89,11 +86,13 @@ body {
   width: 90%;
   transition: .5s ease-in;
 }
+
 .nav.collapse {
   .user__info--name {
     display: none;
   }
 }
+
 .content__obj {
   font-weight: 300;
   margin-bottom: 30px;

@@ -1,4 +1,3 @@
-
 .nav {
   float: left;
   width: 30%;
@@ -27,7 +26,7 @@
 }
 
 .user {
-  height: 80px;
+  height: 145px;
   background: linear-gradient(to bottom, $c-green, #af72c5);
   text-align: middle;
 }
@@ -76,13 +75,14 @@
   }
 }
 
-
-v-one, v-two, v-three, v-four { 
+v-one,
+v-two,
+v-three,
+v-four {
   height: 57px;
   width: 57px;
   display: block;
 }
-
 
 .user__info--surname {
   font-size: 20px;
@@ -172,6 +172,7 @@ v-one, v-two, v-three, v-four {
   padding: 6px 9px;
   font-weight: bold;
 }
+
 
 /* ---------------- NAV-ITEM ACTIVE ---------------- */
 
