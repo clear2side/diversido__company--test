@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+.nav__left .nav__conteiner {
+  padding-left: 40px;
+}
+
 .logo__link {
   height: 80px;
   line-height: 80px;
@@ -110,7 +114,8 @@ v-four {
 
 .nav__item {
   position: relative;
-  height: 75px;
+  height: 68px;
+  line-height: 68px;
   .nav__options--list {
     display: none;
   }
@@ -120,10 +125,16 @@ v-four {
   }
 }
 
+.nav__item--deactive {
+  height: 75px;
+  line-height: 75px;
+  margin-left: -10px;
+}
+
 .nav__item--button {
   position: relative;
   cursor: pointer;
-  height: 60px;
+  height: 68px;
   width: 100%;
   text-align: left;
 }
@@ -140,8 +151,8 @@ v-four {
 }
 
 .nav__item--button_icon {
-  height: 28px;
-  width: 28px;
+  height: 27px;
+  width: 27px;
   fill: #fff;
 }
 
@@ -150,7 +161,7 @@ v-four {
   height: 25px;
   top: 0;
   bottom: 0;
-  right: 50px;
+  right: 43px;
   margin: auto;
 }
 
@@ -172,11 +183,11 @@ v-four {
 
 .nav__item--message_count {
   position: absolute;
-  right: 40px;
+  right: 30px;
   background: #f16192;
   border-radius: 10px;
   font-size: 12px;
-  padding: 6px 9px;
+  padding: 3px 6px;
   font-weight: bold;
 }
 
@@ -185,28 +196,31 @@ v-four {
 
 .nav__options--list {
   display: block;
-  padding-bottom: 20px;
+  margin: 14px 0 22px 30px;
   * {
     transition: all 0.5s ease-in-out;
   }
 }
 
+.nav__options--item {
+  line-height: 43px;
+}
+
 .nav__item--deactive_title {
   text-transform: uppercase;
   font-size: 20px;
-  line-height: 70px;
 }
 
 .nav__item.active {
   height: 100%;
   background: #486e91;
-  margin-left: -35px;
-  padding-left: 35px;
+  margin-left: -40px;
   .nav__item--button {
-    margin-left: -40px;
-    padding-left: 35px;
-    width: calc(100% + 40px);
+    padding-left: 25px;
     border-left: 5px solid #46c1fa;
+    &:hover {
+      padding-left: 25px;
+    }
   }
   .nav__item--button_title {
     font-size: 14px;
@@ -217,14 +231,19 @@ v-four {
   .nav__item--button_arrow-svg {
     transform: rotate(0deg);
   }
+  .nav__item--button_icon {
+    height: 35px;
+    width: 35px;
+  }
 }
 
-.nav__item--button:hover {
+.nav__item:hover {
   background: #486e91;
   margin-left: -40px;
-  padding-left: 35px;
-  width: calc(100% + 40px);
-  border-left: 5px solid #46c1fa;
+  .nav__item--button {
+    padding-left: 35px;
+    border-left: 5px solid #46c1fa;
+  }
   svg {
     fill: #46c1fa;
   }

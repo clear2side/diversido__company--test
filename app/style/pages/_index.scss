@@ -1,6 +1,6 @@
 .content__wrap {
   float: left;
-  width: 70%;
+  width: calc(100% - 314px);
   min-height: calc(100% - 80px);
   padding: 25px;
   color: #777;
@@ -11,12 +11,12 @@
 }
 
 .content__wrap.collapse {
-  width: 90%;
+  width: calc(100% - 120px);
   transition: .5s ease-in;
 }
 
 .conteiner {
-  width: 90%;
+  width: 96%;
   margin: 0 auto;
 }
 
@@ -34,7 +34,7 @@
     .content__top--rollup_title {
       color: lightgrey;
     }
-    .content__top--rollut_icon-svg polyline {
+    .content__top--rollup_icon-svg polyline {
       fill: lightgrey;
     }
   }
@@ -44,8 +44,7 @@
   text-transform: uppercase;
   font-weight: bold;
   color: #777;
-  font-weight: 12px;
-  margin-right: 10px;
+  font-size: 14px;
 }
 
 .content__top--ctrl_list {
@@ -58,7 +57,7 @@
 }
 
 .content__top--ctrl_button {
-  height: 17px;
+  height: 15px;
   width: 17px;
   fill: #777;
   &:hover {
@@ -68,14 +67,17 @@
   }
 }
 
-.content__top--rollut_icon-svg {
-  height: 10px;
-  width: 15px;
+.content__top--rollup_icon-svg {
+  height: 7px;
+  width: 14px;
   display: inline-block;
 }
 
 .content__table {
   width: 100%;
+  .conteiner {
+    width: 100%;
+  }
 }
 
 .content__table--titles {
@@ -88,6 +90,7 @@
 
 .content__obj {
   text-align: center;
+  padding: 15px 0;
 }
 
 

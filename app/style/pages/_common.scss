@@ -6,11 +6,6 @@
 
 /* ---------------- SVG ---------------- */
 
-.nav__options--item_spinner {
-  height: 16px;
-  width: 16px;
-}
-
 .nav__left--spinner,
 .nav__left--polyline {
   fill: none;
@@ -27,7 +22,6 @@
 }
 
 .nav__options--link_item {
-  padding: 6px 0;
   &:hover {
     .nav__options--item_title {
       color: $c-blue;
@@ -53,13 +47,13 @@
 /* ---------------- COLLAPSE ---------------- */
 
 .nav.collapse {
-  width: 10%;
+  width: 120px;
   min-width: 70px;
   transition: .5s ease-in;
   span {
     display: none;
   }
-  .nav__item.deactive {
+  .nav__item--deactive {
     display: none;
   }
   .nav__conteiner {
@@ -89,7 +83,7 @@
 }
 
 .header.collapse {
-  width: 90%;
+  width: calc(100% - 120px);
   transition: .5s ease-in;
 }
 
