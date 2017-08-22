@@ -40,17 +40,6 @@ block content
                         img(src="./img/bg2.png")
                       td.content__obj(v-for="(item,index) in obj2") {{item}}
     
-    .add__obj--wrapper
-      button.add__obj--button(@click="formNewObj=!formNewObj")
-        span.add__obj--icon + 
-      .wrap__animation--form
-        //- transition( 
-        //-   name="form-transition"
-        //-   enter-to-class="animated slideInRight"
-        //-   leave-to-class="animated bounceOutRight")  
-
-          
-
   .popup(v-show="formNewObj")
     .popup__wrap
       .popup__window
@@ -75,7 +64,7 @@ block content
                   .user__info--photo
                     img(src="./img/1.png", alt="photo")
                 input(
-                  type="radio" id="v-one"       value="ava_one" v-model="labelAva" @click="switchAva('v-one')")
+                  type="radio" id="v-one" value="ava_one" v-model="labelAva" @click="switchAva('v-one')")
               li.form__radio--pic_item
                 label(for="v-two" )
                   .user__info--photo
@@ -95,7 +84,7 @@ block content
                     img(src="./img/2.jpg", alt="photo")
                 input(
                   type="radio" id="v-four" value="ava_four" v-model="labelAva" @click="switchAva('v-four')" )
-
+          button.popup__submit--button(@click="formNewObj=!formNewObj") submit
         
 
   script.

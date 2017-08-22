@@ -235,10 +235,6 @@
             </li>
           </ul>
         </div>
-        <div class="add__obj--wrapper">
-          <button class="add__obj--button" @click="formNewObj=!formNewObj"><span class="add__obj--icon">+ </span></button>
-          <div class="wrap__animation--form"></div>
-        </div>
       </div>
       <div class="popup" v-show="formNewObj">
         <div class="popup__wrap">
@@ -289,6 +285,7 @@
                   </li>
                 </ul>
               </div>
+              <button class="popup__submit--button" @click="formNewObj=!formNewObj">submit</button>
             </div>
           </div>
         </div>

@@ -98,7 +98,7 @@
   height: 100%;
   width: 100%;
   position: fixed;
-  background: rgba(lightcyan, .5);
+  background: rgba(darkcyan, .5);
   z-index: 15;
 }
 
@@ -111,8 +111,9 @@
 
 .popup__window {
   position: absolute;
-  height: 320px;
-  width: 500px;
+  height: 350px;
+  max-width: 500px;
+  min-width: 300px;
   background: #363a46;
   z-index: 16;
   top: 0;
@@ -174,14 +175,11 @@
 }
 
 .popup__icon--close:hover {
-  background: linear-gradient(to left, #528ffe, white);
+  background: #363a46;
   svg {
-    fill: #363a46;
+    fill: #528ffe;
   }
 }
-
-
-/* add new table item */
 
 .add__obj--wrapper {
   margin: 20px 40px 0 0;
@@ -217,9 +215,6 @@
   font-weight: bold;
   color: #fbfbfb;
 }
-
-
-/* vue animation */
 
 .slide-fade-enter-active {
   transition: all .5s ease;
@@ -263,9 +258,11 @@
 }
 
 .form__userData {
-  color: $c-blue;
+  color: grey;
   font-size: 14px;
   padding: 3px 5px;
+  border-radius: 7px;
+  margin-left: 7px;
 }
 
 .form__radio--pic_list {
@@ -283,5 +280,22 @@
   input {
     margin: auto;
     margin-top: 10px;
+  }
+}
+
+.popup__submit--button {
+  display: block;
+  text-transform: uppercase;
+  margin: auto;
+  color: white;
+  font-weight: bold;
+  padding: 10px 50px;
+  background: #528ffe;
+  border-radius: 14px;
+  font-size: 14px;
+  margin-top: 10px;
+  &:hover {
+    background: #363a46;
+    color: #528ffe;
   }
 }
