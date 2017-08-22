@@ -1,24 +1,27 @@
 .nav {
   float: left;
-  width: 30%;
+  width: 314px;
   min-height: 100%;
   background: $c-blue;
   color: white;
 }
 
 .nav__conteiner {
-  padding-left: 40px;
+  padding-left: 30px;
   width: 100%;
 }
 
 .logo__link {
+  height: 80px;
   line-height: 80px;
+  padding-top: 3px;
 }
 
 .logo__link--title {
   font-size: 36px;
   font-weight: normal;
   text-align: left;
+  letter-spacing: 3.7px;
 }
 
 .logo__link--title::first-letter {
@@ -26,7 +29,7 @@
 }
 
 .user {
-  height: 145px;
+  height: 142px;
   background: linear-gradient(to bottom, $c-green, #af72c5);
   text-align: middle;
 }
@@ -70,8 +73,8 @@
 
 .user__info--photo {
   border-radius: 100px;
-  height: 57px;
-  width: 57px;
+  height: 62px;
+  width: 62px;
   overflow: hidden;
   background: #fff;
   img {
@@ -102,11 +105,12 @@ v-four {
 
 .user__info--company {
   font-size: 16px;
+  margin-top: 1px;
 }
 
 .nav__item {
   position: relative;
-  height: 60px;
+  height: 75px;
   .nav__options--list {
     display: none;
   }

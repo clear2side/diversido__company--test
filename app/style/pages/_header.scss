@@ -1,6 +1,6 @@
 .header {
   float: right;
-  width: 70%;
+  width: calc(100% - 314px);
   background: $c-green;
   @extend %clearfix;
   line-height: 80px;
