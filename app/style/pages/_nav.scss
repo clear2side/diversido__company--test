@@ -45,6 +45,11 @@
   }
 }
 
+.nav__item--link_message {
+  display: flex;
+  align-items: center;
+}
+
 .user__info--name,
 .user__info--photo {
   display: inline-block;
@@ -114,7 +119,7 @@ v-four {
 .nav__item--button {
   position: relative;
   cursor: pointer;
-  height: 75px;
+  height: 60px;
   width: 100%;
   text-align: left;
 }
@@ -153,10 +158,8 @@ v-four {
 
 .nav__item--message {
   font-size: 18px;
-}
-
-.nav__item--link_message {
-  padding-top: calc(75px / 2 - 13px);
+  display: flex;
+  align-items: center;
 }
 
 .nav__item--link_message .nav__item--button_title {

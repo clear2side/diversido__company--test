@@ -80,17 +80,17 @@
     text-align: center;
     margin-left: -7px;
   }
+  .user__info--name {
+    display: none;
+  }
+  .nav__item--link_message {
+    justify-content: center;
+  }
 }
 
 .header.collapse {
   width: 90%;
   transition: .5s ease-in;
-}
-
-.nav.collapse {
-  .user__info--name {
-    display: none;
-  }
 }
 
 .content__obj {

@@ -1,6 +1,7 @@
 .content__wrap {
   float: left;
   width: 70%;
+  min-height: calc(100% - 80px);
   padding: 25px;
   color: #777;
 }
@@ -89,9 +90,11 @@
   text-align: center;
 }
 
+
 /* add new table item */
+
 .add__obj--wrapper {
-  margin: 20px 40px 0 0 ;
+  margin: 20px 40px 0 0;
   display: block;
   text-align: right;
   height: 50px;
@@ -113,7 +116,7 @@
   &:hover {
     border: 1px solid lightgrey;
     background: #fbfbfb;
-    .add__obj--icon { 
+    .add__obj--icon {
       color: grey;
     }
   }
@@ -125,7 +128,9 @@
   color: #fbfbfb;
 }
 
+
 /* vue animation */
+
 .slide-fade-enter-active {
   transition: all .5s ease;
 }
@@ -134,16 +139,19 @@
   transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 
-.slide-fade-enter, .slide-fade-leave-to {
+.slide-fade-enter,
+.slide-fade-leave-to {
   transform: translateY(-10px);
   opacity: 0;
 }
+
 .wrap__animation--form {
   overflow: hidden;
   display: inline-block;
   background: #fbfbfb;
   border-top-left-radius: 20px;
 }
+
 .block__form--new_obj {
   display: inline-block;
   height: 100%;
@@ -155,17 +163,20 @@
   border-right: 0;
   padding-left: 30px;
 }
+
 .form__titles {
   text-transform: uppercase;
   font-weight: bold;
   margin-left: 20px;
   font-size: 12px;
 }
+
 .form__userData {
   color: $c-blue;
   font-size: 14px;
   padding: 3px 5px;
 }
+
 .form__radio--pic {
   margin-top: 20px;
 }
