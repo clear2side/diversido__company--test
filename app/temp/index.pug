@@ -44,45 +44,59 @@ block content
       button.add__obj--button(@click="formNewObj=!formNewObj")
         span.add__obj--icon + 
       .wrap__animation--form
-        transition( 
-          name="form-transition"
-          enter-to-class="animated slideInRight"
-          leave-to-class="animated bounceOutRight")  
+        //- transition( 
+        //-   name="form-transition"
+        //-   enter-to-class="animated slideInRight"
+        //-   leave-to-class="animated bounceOutRight")  
 
-          .block__form--new_obj(v-show="formNewObj")
-            .form__new_obj
-              span.form__titles login
-              input.form__userData(v-model="user_name")
-            .form__new_obj
-              span.form__titles your company 
-              input.form__userData(v-model="user_company")
+          
 
-            .form__radio--pic_wrap
-              .form__radio--pic
-              
-                input(
-                  type="radio" id="v-one"       value="ava_one" v-model="labelAva" @click="switchAva('v-one')")
+  .popup(v-show="formNewObj")
+    .popup__wrap
+      .popup__window
+        .popup__icon--center
+          +icon('popup_icon')
+        .popup__icon--close(@click="formNewObj=!formNewObj")
+          +icon('close')
+
+        .popup__title Hello! Sign In
+        .block__form--new_obj()
+          .form__new_obj
+            span.form__titles login
+            input.form__userData(v-model="user_name")
+          .form__new_obj
+            span.form__titles your company 
+            input.form__userData(v-model="user_company")
+
+          .form__radio--pic_wrap
+            ul.form__radio--pic_list
+              li.form__radio--pic_item
                 label(for="v-one")
                   .user__info--photo
                     img(src="./img/1.png", alt="photo")
-              
                 input(
-                  type="radio" id="v-two" value="ava_two" v-model="labelAva" @click="switchAva('v-two')" )
+                  type="radio" id="v-one"       value="ava_one" v-model="labelAva" @click="switchAva('v-one')")
+              li.form__radio--pic_item
                 label(for="v-two" )
                   .user__info--photo
                     img(src="./img/2.png", alt="photo")
-                    
                 input(
-                  type="radio" id="v-three" value="ava_tree" v-model="labelAva" @click="switchAva('v-three')" )
+                  type="radio" id="v-two" value="ava_two" v-model="labelAva" @click="switchAva('v-two')" )
+                    
+              li.form__radio--pic_item
                 label(for="v-three" )
                   .user__info--photo
                     img(src="./img/4.jpg", alt="photo")
-
                 input(
-                  type="radio" id="v-four" value="ava_four" v-model="labelAva" @click="switchAva('v-four')" )
+                  type="radio" id="v-three" value="ava_tree" v-model="labelAva" @click="switchAva('v-three')" )
+              li.form__radio--pic_item
                 label(for="v-four" )
                   .user__info--photo
                     img(src="./img/2.jpg", alt="photo")
+                input(
+                  type="radio" id="v-four" value="ava_four" v-model="labelAva" @click="switchAva('v-four')" )
+
+        
 
   script.
     new Vue({

@@ -91,6 +91,96 @@
 }
 
 
+/* ----------- popup ----------- */
+
+.popup {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: rgba(lightcyan, .5);
+  z-index: 15;
+}
+
+.popup__wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.popup__window {
+  position: absolute;
+  height: 320px;
+  width: 500px;
+  background: #363a46;
+  z-index: 16;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 14px;
+}
+
+.popup__title {
+  display: block;
+  color: #528ffe;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 45px 0 15px 0;
+}
+
+.popup__icon--center {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: linear-gradient(to left, #363a46, #528ffe);
+  margin-top: -25px;
+  border-radius: 50px;
+  svg {
+    fill: #fff;
+    height: 70%;
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.popup__icon--close {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background: linear-gradient(to left, #363a46, #528ffe);
+  top: 0;
+  right: 0;
+  border-radius: 50px;
+  svg {
+    fill: #fff;
+    height: 70%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.popup__icon--close:hover {
+  background: linear-gradient(to left, #528ffe, white);
+  svg {
+    fill: #363a46;
+  }
+}
+
+
 /* add new table item */
 
 .add__obj--wrapper {
@@ -154,7 +244,6 @@
 
 .block__form--new_obj {
   display: inline-block;
-  height: 100%;
 }
 
 .form__new_obj {
@@ -162,6 +251,7 @@
   padding: 10px;
   border-right: 0;
   padding-left: 30px;
+  text-align: right;
 }
 
 .form__titles {
@@ -169,6 +259,7 @@
   font-weight: bold;
   margin-left: 20px;
   font-size: 12px;
+  color: white;
 }
 
 .form__userData {
@@ -177,6 +268,20 @@
   padding: 3px 5px;
 }
 
-.form__radio--pic {
+.form__radio--pic_list {
   margin-top: 20px;
+}
+
+.form__radio--pic_item {
+  display: inline-block;
+  text-align: center;
+  padding: 0 10px 10px 10px;
+  input,
+  label {
+    display: block;
+  }
+  input {
+    margin: auto;
+    margin-top: 10px;
+  }
 }
