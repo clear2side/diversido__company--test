@@ -11,71 +11,70 @@ nav.nav
           span.user__info--surname {{user_name}}
           span.user__info--company {{user_company}}
   .nav__left
-    .nav__conteiner
-      ul.nav__list
-        li.nav__item--deactive
-          h3.nav__item--deactive_title general
-        li.nav__item.active
-          button.nav__item--button
-            .nav__item--button_icon
-              +icon("brush")
-            span.nav__item--button_title Dashboard
-            span.nav__item--button_arrow.nav__right--icon
-            
-              svg.nav__item--button_arrow-svg
-                polyline.nav__left--polyline(points="0 0,6 6, 12 0" style='fill:none; stroke:#fff; stroke-width:2')
+    ul.nav__list
+      li.nav__item--deactive
+        h3.nav__item--deactive_title general
+      li.nav__item.active
+        button.nav__item--button
+          .nav__item--button_icon
+            +icon("brush")
+          span.nav__item--button_title Dashboard
+          span.nav__item--button_arrow.nav__right--icon
+          
+            svg.nav__item--button_arrow-svg
+              polyline.nav__left--polyline(points="0 0,6 6, 12 0" style='fill:none; stroke:#fff; stroke-width:2')
 
-          ul.nav__options--list
-            - for (var i=0; i<dashboardsCircles.length; i++) {
-              li.nav__options--item
-                a.nav__options--link_item
-                  span.nav__options--item_spinner
-                    svg.nav__options--item_spinner-svg
-                      circle.nav__left--spinner(cx="7" cy="7" r="6" stroke="" + colorCircles[i] + "")
-                  span.nav__options--item_title= dashboardsCircles[i]
-            - }
+        ul.nav__options--list
+          - for (var i=0; i<dashboardsCircles.length; i++) {
+            li.nav__options--item
+              a.nav__options--link_item
+                span.nav__options--item_spinner
+                  svg.nav__options--item_spinner-svg
+                    circle.nav__left--spinner(cx="7" cy="7" r="6" stroke="" + colorCircles[i] + "")
+                span.nav__options--item_title= dashboardsCircles[i]
+          - }
 
-        li.nav__item
-          button.nav__item--button          
-            .nav__item--button_icon
-              +icon("layout")
-            span.nav__item--button_title Layouts
-            span.nav__item--button_arrow.nav__right--icon
-              svg.nav__item--button_arrow-svg
-                polyline(points="0 0,6 6, 12 0" style='fill:none; stroke:#fff; stroke-width:2')
-        
-          ul.nav__options--list
-            - for (var i=0; i<layoutsCircles.length; i++) {
-              li.nav__options--item
-                a.nav__options--link_item
-                  span.nav__options--item_spinner
-                    svg.nav__options--item_spinner-svg
-                      circle.nav__left--spinner(cx="7" cy="7" r="6" stroke="" + colorCircles[i] + "")
-                  span.nav__options--item_title= layoutsCircles[i]    
-            - }  
+      li.nav__item
+        button.nav__item--button          
+          .nav__item--button_icon
+            +icon("layout")
+          span.nav__item--button_title Layouts
+          span.nav__item--button_arrow.nav__right--icon
+            svg.nav__item--button_arrow-svg
+              polyline(points="0 0,6 6, 12 0" style='fill:none; stroke:#fff; stroke-width:2')
+      
+        ul.nav__options--list
+          - for (var i=0; i<layoutsCircles.length; i++) {
+            li.nav__options--item
+              a.nav__options--link_item
+                span.nav__options--item_spinner
+                  svg.nav__options--item_spinner-svg
+                    circle.nav__left--spinner(cx="7" cy="7" r="6" stroke="" + colorCircles[i] + "")
+                span.nav__options--item_title= layoutsCircles[i]    
+          - }  
 
-        li.nav__item
-          button.nav__item--button
-            .nav__item--button_icon
-              +icon('folder')
-            span.nav__item--button_title Pages
-            span.nav__item--button_arrow.nav__right--icon
-              svg.nav__item--button_arrow-svg
-                polyline(points="0 0,6 6, 12 0" style='fill:none; stroke:#fff; stroke-width:2')
-                
-          ul.nav__options--list
-            - for (var i=0; i<pagesCircles.length; i++) {
-              li.nav__options--item
-                a.nav__options--link_item
-                  span.nav__options--item_spinner
-                    svg.nav__options--item_spinner-svg
-                      circle.nav__left--spinner(cx="7" cy="7" r="6" stroke="" + colorCircles[i] + "")
-                  span.nav__options--item_title= pagesCircles[i]      
-            - }    
+      li.nav__item
+        button.nav__item--button
+          .nav__item--button_icon
+            +icon('folder')
+          span.nav__item--button_title Pages
+          span.nav__item--button_arrow.nav__right--icon
+            svg.nav__item--button_arrow-svg
+              polyline(points="0 0,6 6, 12 0" style='fill:none; stroke:#fff; stroke-width:2')
+              
+        ul.nav__options--list
+          - for (var i=0; i<pagesCircles.length; i++) {
+            li.nav__options--item
+              a.nav__options--link_item
+                span.nav__options--item_spinner
+                  svg.nav__options--item_spinner-svg
+                    circle.nav__left--spinner(cx="7" cy="7" r="6" stroke="" + colorCircles[i] + "")
+                span.nav__options--item_title= pagesCircles[i]      
+          - }    
 
-        li.nav__item--message
-          a.nav__item--link_message.nav__item--button
-            .nav__item--button_icon
-              +icon('message')
-            span.nav__item--button_title Message
-            span.nav__item--message_count.nav__right--icon 09
+      li.nav__item
+        button.nav__item--button
+          .nav__item--button_icon
+            +icon('message')
+          span.nav__item--button_title Message
+          span.nav__right--icon.message__count 09

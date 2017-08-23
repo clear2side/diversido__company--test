@@ -59,6 +59,14 @@
   .nav__conteiner {
     padding-left: 0;
   }
+  .nav__item--button,
+  .nav__item {
+    padding-left: 0 !important;
+  }
+  .nav__item:hover .nav__item--button_icon {
+    height: 35px;
+    width: 35px;
+  }
   .user__info--photo {
     display: block;
     margin: 0 auto;
@@ -67,7 +75,7 @@
     display: inherit;
     text-align: center;
   }
-  .nav__item.active {
+  .nav__item.active .nav__options--list {
     display: none;
   }
   .logo__link--title {
@@ -76,9 +84,6 @@
   }
   .user__info--name {
     display: none;
-  }
-  .nav__item--link_message {
-    justify-content: center;
   }
 }
 
@@ -94,4 +99,8 @@
 
 .nav.collapse__tablets {
   width: 100%;
+}
+
+.content__wrap.collapse__tablets {
+  width: 100% !important;
 }

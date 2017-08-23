@@ -1,11 +1,7 @@
 // nav list accordeon
 $('.nav__item').on('click', function () {
-  $this = $(this);
-  if (!$this.hasClass('active') && !$('.nav').hasClass('collapse')) {
-    $this.addClass('active').siblings().removeClass('active');
-  } else {
-    $this.removeClass('active');
-  }
+  $(this).addClass('active').siblings().removeClass('active');
+
 });
 
 // header trigger
@@ -14,9 +10,6 @@ $('.header__roll').on('click', function () {
   if (!$(this).hasClass('active')) {
     $('.header__roll--icon.close').addClass('active').siblings().removeClass('active');
     $('.nav, .header, .content__wrap').addClass('collapse');
-    if ($('.nav__item').hasClass('active')) {
-      $('.nav__item').removeClass('active');
-    }
   } else {
     $('.header__roll--icon.open').addClass('active').siblings().removeClass('active');
     $('.nav, .header, .content__wrap').removeClass('collapse');
@@ -37,10 +30,13 @@ function WidthChange(mq) {
 }
 
 $('.another__header--roll').on('click', function () {
-  $('.nav').toggleClass('collapse__tablets').toggleClass('collapse')
+  $('.nav').toggleClass('collapse__tablets').toggleClass('collapse');
   $(this).toggleClass('collapse__tablets').find('.header__roll--icon.close').toggleClass('active').siblings('.header__roll--icon.open').toggleClass('active');
-
-  $('.content__wrap').toggle();
+  if ($('.nav').hasClass('collapse__tablets')) {
+    $('.content__wrap').addClass('collapse__tablets');
+  } else {
+    $('.content__wrap').removeClass('collapse__tablets');
+  }
 })
 
 // button icon trigger
